@@ -26,3 +26,17 @@ command Xpython !python %
 command Xphp !php -a %
 command Xmake !make && make run
 
+" Courtesy of https://github.com/ixt/dotfiles/blob/master/.vimrc
+func! WordProcessingMode()
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    setlocal spell spelllang=en_gb
+    map j gj
+    map k gk
+    set complete+=s
+    set formatprg=par
+    setlocal wrap
+    setlocal linebreak
+endfu
+com! WP call WordProcessingMode()
+
