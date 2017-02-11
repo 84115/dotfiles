@@ -6,6 +6,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+set t_Co=256
+
 set number
 set expandtab
 set shiftwidth=4
@@ -19,3 +21,8 @@ command Sidebar NERDTree
 
 command Xbash !bash %
 command Xnode !node %
+command Xruby !ruby %
+command Xpython !python %
+command Xphp !php -a %
+command Xmake !make && make run
+
