@@ -19,12 +19,13 @@ call pathogen#helptags()
 
 command Sidebar NERDTree
 
-command Xbash !bash %
-command Xnode !node %
-command Xruby !ruby %
-command Xpython !python %
-command Xphp !php -a %
-command Xmake !make && make run
+command Xbash w | !bash %
+command Xnode w | !node %
+command Xruby w | !ruby %
+command Xpython w | !python %
+command Xphp w | !php -a %
+command Xhaskell w | !clear && ghci %
+command Xmake w | !make && make run
 
 " Courtesy of https://github.com/ixt/dotfiles/blob/master/.vimrc
 func! WordProcessingMode()
