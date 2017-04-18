@@ -25,7 +25,8 @@ command Xruby w | !ruby %
 command Xpython w | !python %
 command Xphp w | !php -a %
 command Xhaskell w | !clear && ghci %
-command Xmake w | !make && make run
+command Chaskell w | !clear && ghc -o %.bin % && ./%.bin
+command Cmake w | !make && make run
 
 " Courtesy of https://github.com/ixt/dotfiles/blob/master/.vimrc
 func! WordProcessingMode()
