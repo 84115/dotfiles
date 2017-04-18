@@ -9,7 +9,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-xline () { sed -n "$1p" | xclip }
+xline () {
+    sed -n "$1p" | xcli
+}
 
 alias x='clear'
 alias reload='source ~/.bashrc'
@@ -19,4 +21,3 @@ alias tips="echo 'Search Dir: grep -Ril \"string\" *
 Copy Text: xclip
 Copy Line Number: xline 1
 Git Misc: git alias'"
-
