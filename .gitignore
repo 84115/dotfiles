@@ -1,0 +1,11 @@
+# Ignore all files
+*
+
+# Expect From a few config files
+.bash_aliases
+.bashrc
+.gitconfig
+.vimrc
+LICENSE
+README.md
+
