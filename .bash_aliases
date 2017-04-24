@@ -16,6 +16,7 @@ xline () {
 alias x='clear'
 alias reload='source ~/.bashrc'
 alias xclip="xclip -selection c"
+alias pyclip="python ~/github/pyclip/pyclip.py"
 
 alias tips="echo 'Search Dir: grep -Ril \"string\" *
 Copy Text: xclip
