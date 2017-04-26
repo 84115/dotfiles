@@ -17,6 +17,7 @@ alias x='clear'
 alias reload='source ~/.bashrc'
 alias xclip="xclip -selection c"
 alias pyclip="python ~/github/pyclip/pyclip.py"
+alias untar="tar -xvzf"
 
 alias tips="echo 'Search Dir: grep -Ril \"string\" *
 Copy Text: xclip

@@ -28,6 +28,12 @@ command Xhaskell w | !clear && ghci %
 command Chaskell w | !clear && ghc -o %.bin % && ./%.bin
 command Cmake w | !make && make run
 
+" remap h to insert and use ijkl for inverse T cursor movement
+map h <insert>
+map i <Up>
+map j <Left>
+map k <Down>
+
 " Courtesy of https://github.com/ixt/dotfiles/blob/master/.vimrc
 func! WordProcessingMode()
     setlocal formatoptions=1
