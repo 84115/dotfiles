@@ -2,10 +2,15 @@
 *
 
 # Expect From a few config files
-.bash_aliases
-.bashrc
-.gitconfig
-.vimrc
-LICENSE
-README.md
+!.bash_aliases
+!.bashrc
+!.gitconfig
+!.vimrc
+!.newsbeuter/config
+!.newsbeuter/urls
+!.config/sxhkd/*
+!.config/bspwm/*
+!.config/youtube-dl/*
+!LICENSE
+!README.md
 

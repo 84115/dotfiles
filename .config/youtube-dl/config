@@ -1,0 +1,5 @@
+# See https://github.com/ytdl-org/youtube-dl/blob/master/README.md#configuration
+
+# Save all videos under Movies directory in your home directory
+-o ~/Videos/youtube/%(title)s.%(ext)s
+
