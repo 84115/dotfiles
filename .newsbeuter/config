@@ -10,3 +10,22 @@ macro g set browser "youtube-dl -f '[height <=? 480]' %u > ~/Videos/yt-dl &"; op
 
 macro q set browser "echo %u >> ~/bin/queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
 
+
+
+
+# colors
+#color background           color255 color0
+#color listnormal           color255 color0
+#color listfocus            color255 color88 bold
+color listfocus            magenta black bold
+#color listnormal_unread    color255 color0 bold
+#color listfocus_unread     color255 color88 bold
+color info                 green black bold
+#color article              color255 color0
+
+# highlights
+highlight article "^(Feed|Title|Link|Date|Author):.*$" color31 color0 
+highlight article "https?://[^ ]+" color9 color0 protect
+highlight article "\\[image\\ [0-9]+\\]" green default
+
+

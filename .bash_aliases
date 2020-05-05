@@ -10,7 +10,7 @@ if ! shopt -oq posix; then
 fi
 
 xline () {
-    sed -n "$1p" | xcli
+    sed -n "$1p" | xclip
 }
 
 alias x='clear'
