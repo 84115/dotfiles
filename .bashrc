@@ -163,3 +163,6 @@ fi
 
 
 export EDITOR='vim'
+
+export LYNX_LSS="$HOME/.lynx.lss"
+

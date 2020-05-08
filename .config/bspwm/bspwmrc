@@ -42,9 +42,9 @@ gnome-terminal -x bash -c "cmatrix"
 gnome-terminal -x bash -c "htop"
 gnome-terminal -x bash -c "newsbeuter"
 
-amixer sset Master 100+ unmute
-amixer sset Headphone 100+ unmute
-amixer sset Speaker 100+ unmute
+#amixer sset Master 100+ unmute
+#amixer sset Headphone 100+ unmute
+#amixer sset Speaker 100+ unmute
 
 polybar example &
 

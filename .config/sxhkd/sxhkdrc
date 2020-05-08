@@ -1,12 +1,8 @@
 #
 # wm independent hotkeys
 #
-
-
-
 super + r
         bspc node @/ -R 90
-
 
 
 
@@ -59,8 +55,11 @@ super + shift + e
 super + shift + v
         gnome-terminal -x bash -c "vim ~/.config/; exec bash"
 
-super + shift + r
+super + shift + f
         gnome-terminal -x bash -c "ranger; exec bash"
+
+super + shift + r
+        gnome-terminal -x bash -c "rtv --enable-media; exec bash"
 
 super + shift + h
         gnome-terminal -x bash -c "htop; exec bash"
@@ -74,8 +73,12 @@ super + shift + s
 super + shift + m
         gnome-terminal -x bash -c "ncmpcpp; exec bash"
 
+super + shift + c
+        gnome-terminal -x bash -c "bc; exec bash"
+
 super + shift + y
-        vlc ~/Videos/youtube/
+        gnome-terminal -x bash -c "ranger ~/Videos/youtube/; exec bash"
+
 
 
 #super + shift + Return
@@ -217,3 +220,9 @@ super + z
 
 super + x
     amixer sset Master 10+ unmute
+
+super + shift + z
+    xrandr --output eDP-1 --brightness 0.5
+
+super + shift + x
+    xrandr --output eDP-1 --brightness 1.0
