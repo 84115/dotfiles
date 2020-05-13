@@ -20,9 +20,10 @@ call pathogen#helptags()
 
 command Sidebar NERDTree
 
+command Run w | !%
 command Xbash w | !bash %
 command Xnode w | !node %
-command Xruby w | !ruby %
+command Xruby w | clear | !ruby %
 command Xpython w | !python %
 command Xphp w | !php -a %
 command Xhaskell w | !clear && ghci %
@@ -42,4 +43,6 @@ func! WordProcessingMode()
     setlocal linebreak
 endfu
 com! WP call WordProcessingMode()
+
+let g:user_emmet_leader_key='<C-E>'
 

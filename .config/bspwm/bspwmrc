@@ -32,19 +32,19 @@ bspc config bottom_padding     18
 bspc config left_padding       18
 bspc config right_padding      18
 
-bspc config urgent_border_color "#B58900" #todo
-bspc config presel_border_color "#26E2FF" #todo
+bspc config urgent_border_color "#FB4934"
+bspc config presel_border_color "#458588"
 bspc config normal_border_color "#222222"
 bspc config focused_border_color "#BDAE93"
 
 
-gnome-terminal -x bash -c "cmatrix"
-gnome-terminal -x bash -c "htop"
-gnome-terminal -x bash -c "newsbeuter"
+#gnome-terminal -x bash -c "cmatrix"
+#gnome-terminal -x bash -c "htop"
+#gnome-terminal -x bash -c "newsbeuter"
 
-#amixer sset Master 100+ unmute
-#amixer sset Headphone 100+ unmute
-#amixer sset Speaker 100+ unmute
+amixer sset Master 50+ unmute
+amixer sset Headphone 50+ unmute
+amixer sset Speaker 50+ unmute
 
 polybar example &
 

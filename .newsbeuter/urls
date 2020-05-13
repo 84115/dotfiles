@@ -1,7 +1,5 @@
 # :%s/.com\/channel\//.com\/feeds\/videos.xml\?channel_id=
 
-http://www.independent.co.uk/news/uk/rss news #The Independent - UK
-http://www.independent.co.uk/news/world/rss news #The Independent - World
 https://blog.mozilla.org/feed/ computing #Mozilla
 http://static.fsf.org/fsforg/rss/news.xml foss #FSF"
 https://yawnbox.wordpress.com/feed/ computing #Computing"
