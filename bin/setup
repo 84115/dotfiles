@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# review output of: apt list --installed
+
+printf "WIP \n"
+exit 0
+
+sudo apt update
+
+printf "[*] Typical tools \n"
+sudo apt install -y screen htop screenfetch \
+    openssl \
+    nodejs npm jq json_pp \
+    make cmake \
+    vim \
+    git \
+    tree \
+    cowsay figlet \
+    imagemagick \
+    ffmpeg ranger newsbeuter \
+    cheese \
+    mutt lynx wget curl youtube-dl
+
+[[ $DISPLAY ]] && printf "[*] WM & GUI \n" && \
+    sudo apt install -y bspwm sxhkd polybar dmenu dunst compton \
+        firefox \
+        seahorse gnome-disks \
+        rxvt-unicode gnome-terminal \
+        vlc mpd ncmpcpp \
+        inkscape gimp \
+        keepassxc
+
