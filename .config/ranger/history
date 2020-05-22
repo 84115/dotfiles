@@ -4,6 +4,17 @@ rename guitar
 rename Eric Andre Show
 dle
 open_with vim
-Q
+open_with q
+del
+rename 
+rename OLD_SUCCESSION_01
+open_with 2to3-2.7`
+open_with qq
+open_with qq
+rename Games/N64
+move Development/ruby
 
+delq
+open_with 1q
 delete 
+Q
