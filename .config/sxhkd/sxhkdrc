@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-        dmenu_run -fn 'Ubuntu Monospace-15' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+        dmenu_run -fn 'Terminus -18' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
 
 super + e
         emoji_dmenu
