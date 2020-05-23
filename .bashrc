@@ -89,44 +89,42 @@ function git_color {
   fi
 }
 
-function git_branch {
-  local git_status="$(git status 2> /dev/null)"
-  local on_branch="On branch ([^${IFS}]*)"
-  local on_commit="HEAD detached at ([^${IFS}]*)"
 
-  if [[ $git_status =~ $on_branch ]]; then
-    local branch=${BASH_REMATCH[1]}
-    echo "($branch)"
-  elif [[ $git_status =~ $on_commit ]]; then
-    local commit=${BASH_REMATCH[1]}
-    echo "($commit)"
-  fi
-}
+function eight_prompt {
+    if [ "$SSH_CONNECTION" ]; then 
+        local __user_and_host="\[\033[01;32m\]\u@\h"
+    else
+        local __user_and_host="\[\033[01;32m\]\u"
+    fi
 
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:'
-#PS1+="\[\$(git_color)\]"
-#PS1+="\$(git_branch)"
-#PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "
-#PS1+=':\[\033[01;34m\]\w\[\033[00m\]\$ '
-
-unset color_prompt force_color_prompt
-
-
-
-
-
-function color_my_prompt {
-    local __user_and_host="\[\033[01;32m\]\u@\h"
     local __cur_location="\[\033[01;34m\]\w"
-    local __git_branch_color="\[\033[31m\]"
-    #local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
+
+    local git_status="$(git status 2> /dev/null)"
+    if [[ ! $git_status =~ "working directory clean" ]]; then
+        local __git_branch_color="\[\033[31m\]"
+        #echo -e $COLOR_RED
+    elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+        local __git_branch_color="\[\033[33m\]"
+        #echo -e $COLOR_YELLOW
+    elif [[ $git_status =~ "nothing to commit" ]]; then
+        local __git_branch_color="\[\033[32m\]"
+        #echo -e $COLOR_GREEN
+    else
+        local __git_branch_color="\[\033[37m\]"
+        #echo -e $COLOR_OCHRE
+    fi
+
+    #local __git_branch_color="\[\033[31m\]"
+
     local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+
     local __prompt_tail="\[\033[35m\]$"
+
     local __last_color="\[\033[00m\]"
+
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
-color_my_prompt
-
+eight_prompt
 
 
 
