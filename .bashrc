@@ -78,12 +78,12 @@ function eight_prompt {
 
     local git_status="$(git status 2> /dev/null)"
 
-    if [[ ! $git_status =~ "working directory clean" ]]; then
-        local __git_branch_color="\[\033[31m\]"
-    elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+    if [[ $git_status =~ "Your branch is ahead of" ]]; then
         local __git_branch_color="\[\033[33m\]"
     elif [[ $git_status =~ "nothing to commit" ]]; then
-        local __git_branch_color="\[\033[32m\]"
+        local __git_branch_color="\[\033[32m\]" 
+    elif [[ ! $git_status =~ "working directory clean" ]]; then
+        local __git_branch_color="\[\033[31m\]"
     else
         local __git_branch_color="\[\033[37m\]"
     fi
