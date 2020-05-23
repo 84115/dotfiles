@@ -67,28 +67,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-COLOR_RED="\033[0;31m"
-COLOR_YELLOW="\033[0;33m"
-COLOR_GREEN="\033[0;32m"
-COLOR_OCHRE="\033[38;5;95m"
-COLOR_BLUE="\033[0;34m"
-COLOR_WHITE="\033[0;37m"
-COLOR_RESET="\033[0m"
-
-function git_color {
-  local git_status="$(git status 2> /dev/null)"
-
-  if [[ ! $git_status =~ "working directory clean" ]]; then
-    echo -e $COLOR_RED
-  elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo -e $COLOR_YELLOW
-  elif [[ $git_status =~ "nothing to commit" ]]; then
-    echo -e $COLOR_GREEN
-  else
-    echo -e $COLOR_OCHRE
-  fi
-}
-
 
 function eight_prompt {
     if [ "$SSH_CONNECTION" ]; then 
@@ -96,13 +74,13 @@ function eight_prompt {
     else
         local __user_and_host="\[\033[01;32m\]\u"
     fi
-
     local __cur_location="\[\033[01;34m\]\w"
 
     local git_status="$(git status 2> /dev/null)"
+
     if [[ ! $git_status =~ "working directory clean" ]]; then
         local __git_branch_color="\[\033[31m\]"
-        #echo -e $COLOR_RED
+        echo -e $COLOR_RED
     elif [[ $git_status =~ "Your branch is ahead of" ]]; then
         local __git_branch_color="\[\033[33m\]"
         #echo -e $COLOR_YELLOW
@@ -117,11 +95,8 @@ function eight_prompt {
     #local __git_branch_color="\[\033[31m\]"
 
     local __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
-
     local __prompt_tail="\[\033[35m\]$"
-
     local __last_color="\[\033[00m\]"
-
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
 eight_prompt
