@@ -8,7 +8,11 @@ super + Return
 
 # program launcher
 super + d
-        dmenu_run -fn 'Terminus -18' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+        dmenu_run -fn 'Terminus -22' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+
+# program launcher
+super + f
+        duck
 
 super + e
         emoji_dmenu
