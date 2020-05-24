@@ -3,11 +3,6 @@ save-path ~/.newsbeuter/saved_articles
 macro k open ; reload ; quit
 
 # Download video
-# macro d set browser "youtube-dl -o '~/Videos/youtube/\%(title)s.\%(ext)s' -f 22 %u &"; open-in-browser ; set browser "$BROWSER %u"
-macro d set browser "youtube-dl -f 22 %u > ~/Videos/yt-dl &"; open-in-browser ; set browser "$BROWSER %u"
-macro f set browser "youtube-dl -f '[height <=? 720]' %u > ~/Videos/yt-dl &"; open-in-browser ; set browser "$BROWSER %u"
-macro g set browser "youtube-dl -f '[height <=? 480]' %u > ~/Videos/yt-dl &"; open-in-browser ; set browser "$BROWSER %u"
-
 macro q set browser "echo %u >> ~/bin/queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
 
 
