@@ -11,7 +11,9 @@
 !.config/sxhkd/*
 !.config/bspwm/*
 !.config/youtube-dl/*
-!.config/gtk-3.0/gtk.css
+.config/gtk-3.0/gtk.css
 !LICENSE
 !README.md
+
+bin/queue.d/*
 
