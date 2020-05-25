@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/bin/youtube-queue.d/
+cd ~/bin/youtube-queue.d/
+
+COUNTER=1
+TOTAL=$(cat queue | wc -l)
+
+if [ ! -f queue.lock ]; then
+  touch queue.lock
+
+  rm queue.backup
+  cp queue queue.backup
+
+  notify-send --urgency=normal -i "youtube-queue" "youtube-queue" "youtube-queue: starting"
+
+  while read q; do
+    A="https://www.youtube.com/watch?v="
+    B=""
+    SRC="${q/$A/$B}"
+    MESSAGE="youtube-downloading: ($COUNTER/$TOTAL) $SRC"
+
+    echo $MESSAGE
+    notify-send --urgency=low -i "youtube-queue" "youtube-queue" "$MESSAGE"
+
+    youtube-dl -f '[height <=? 480]' "$q"
+
+    echo "${MESSAGE/loading/loaded}"
+    notify-send --urgency=low -i "youtube-queue" "youtube-queue" "${MESSAGE/loading/loaded}"
+
+    COUNTER=$((COUNTER + 1))
+  done <queue
+
+  notify-send --urgency=normal -i "youtube-queue" "youtube-queue" "youtube-queue: fin"
+
+  rm queue.lock
+
+  > queue
+else
+    echo "LOCKED"
+fi
+
