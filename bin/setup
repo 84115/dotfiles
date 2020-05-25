@@ -12,6 +12,7 @@ sudo apt install -y screen htop screenfetch \
     openssl \
     nodejs npm jq json_pp \
     make cmake \
+    ruby-dev libffi-dev build-essential \
     vim \
     git \
     tree \
