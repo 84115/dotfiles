@@ -14,7 +14,7 @@ if [ ! -f queue.lock ]; then
   while read q; do
     MESSAGE="Started downloading: $q"
     echo "$MESSAGE"
-    notify-send --urgency=low "$MESSAGE"
+    alert "$MESSAGE"
     youtube-dl -f '[height <=? 480]' "$q"
 
     echo "Done: $q"
@@ -22,7 +22,7 @@ if [ ! -f queue.lock ]; then
     #COUNTER = $((COUNTER++))
   done <queue
 
-  notify-send --urgency=low "Finished downloading videos!"
+  alert "Finished downloading videos!"
   rm queue.lock
 
   > queue
