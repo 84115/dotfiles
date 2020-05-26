@@ -84,7 +84,7 @@ if (arg) {
         response.on('end', function () {
             var result = JSON.parse(str);
 
-            if (typeof result.cards === 'undefined') {
+            if (typeof result.data === 'undefined') {
                 console.log('No results');
             } else {
                 fetch(result);
