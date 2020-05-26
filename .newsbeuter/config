@@ -3,7 +3,7 @@ save-path ~/.newsbeuter/saved_articles
 macro k open ; reload ; quit
 
 # Download video
-macro q set browser "echo %u >> ~/bin/queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
+macro q set browser "echo %u >> ~/bin/youtube-queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
 
 
 
