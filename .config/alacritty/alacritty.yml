@@ -1,0 +1,97 @@
+window:
+    dimensions:
+      columns: 0
+      lines: 0
+    padding:
+      x: 18
+      y: 18
+    decorations: full
+    dynamic_padding: false
+    #startup_mode: Maximized
+
+dpi:
+  x: 96.0
+  y: 96.0
+
+background_opacity: 0.75
+
+font:
+  normal:
+    family: "Terminus"
+    style: Medium
+
+  bold:
+    family: "Terminus"
+    style: Bold
+
+  italic:
+    family: "Terminus"
+    style: Italic
+
+  size: 18.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+debug:
+  render_timer: false
+  persistent_logging: false
+
+scrolling:
+  history: 1000
+  multiplier: 3
+
+colors:
+  primary:
+    background: '0x141414'
+    foreground: '0xEBDBB2'
+
+  cursor:
+    text: '0xEBDBB2'
+    cursor: '0xEBDBB2'
+
+  normal:
+    black:   '0x282828'
+    red:     '0xCC241D'
+    green:   '0x98971A'
+    yellow:  '0xD79921'
+    blue:    '0x458588'
+    magenta: '0xB16286'
+    cyan:    '0x689D6A'
+    white:   '0xBDAE93'
+
+  bright:
+    black:   '0x7C6F64'
+    red:     '0xFB4934'
+    green:   '0xB8BB26'
+    yellow:  '0xFABD2F'
+    blue:    '0x83A598'
+    magenta: '0xD3869B'
+    cyan:    '0x6096BF'
+    white:   '0xEBDBB2'
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+key_bindings:
+  - { key: V,        mods: Control|Shift,    action: Paste               }
+  - { key: C,        mods: Control|Shift,    action: Copy                }
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: true
+
+draw_bold_text_with_bright_colors: true
+
+selection:
+  semantic_escape_chars: ",`|:\"' ()[]{}<>"
+

@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-    	gnome-terminal
+    	alacritty
 
 # program launcher
 super + d
@@ -65,7 +65,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {Left,Down,Up,Right}
+super + shift + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -131,6 +131,18 @@ alt + 4
 alt + 5
     bspc config window_gap 0
 
+
+#
+# window type
+#
+alt + f
+    bspc node -t floating
+
+alt + t
+    bspc node -t tiled
+
+alt + p
+    bspc node -t psuedo_tiled
 
 
 
