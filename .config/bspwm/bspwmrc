@@ -6,6 +6,8 @@ compton &
 
 polybar example &
 
+xscreensaver &
+
 #feh --bg-scale ~/Pictures/MOSHED-2019-1-31-14-21-13.alt.jpg
 #feh --bg-scale ~/Pictures/Wallpaper/fog.jpg
 feh --bg-scale Pictures/Wallpaper/road-lg.jpg

@@ -23,7 +23,7 @@ sudo apt install -y screen htop screenfetch \
     mutt lynx wget curl youtube-dl
 
 [[ $DISPLAY ]] && printf "[*] WM & GUI \n" && \
-    sudo apt install -y bspwm sxhkd polybar dmenu dunst compton \
+    sudo apt install -y bspwm sxhkd polybar dmenu dunst compton xscreensaver \
         firefox \
         seahorse gnome-disks \
         rxvt-unicode gnome-terminal \

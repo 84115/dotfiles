@@ -1,21 +1,17 @@
-#
-# misc hotkeys
-#
-
 # terminal emulator
 super + Return
-    	alacritty
+    alacritty
 
 # program launcher
 super + d
-        dmenu_run -fn 'Terminus -22' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+    dmenu_run -fn 'Terminus -22' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
 
 # program launcher
 super + f
-        duck
+    duck
 
 super + e
-        emoji_dmenu
+    emoji_dmenu
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -23,10 +19,10 @@ super + Escape
 
 # kill whatever
 super + k
-        xkill
+    xkill
 
 super + l
-        dm-tool lock
+    xscreensaver-command -lock
 
 #
 # bspwm hotkeys
@@ -39,7 +35,6 @@ super + alt + Escape
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
-
 
 
 #
@@ -59,7 +54,6 @@ super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 
-
 #
 # preselect
 #
@@ -71,7 +65,6 @@ super + shift + ctrl + {Left,Down,Up,Right}
 # preselect the ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
-
 
 
 #
@@ -93,7 +86,6 @@ super + ctrl + {Left,Down,Up,Right}
 # rotate
 super + ctrl + r
     bspc node @/ -R 90
-
 
 
 #
@@ -153,84 +145,43 @@ super + shift + x
     xrandr --output eDP-1 --brightness 1.0
 
 
-
-#
-# bookmarks
-#
-super + ctrl + f
-    google-chrome --app=https://m.facebook.com
-
-super + ctrl + g
-    google-chrome --app=https://www.google.co.uk
-
-super + ctrl + r
-    google-chrome --app=https://www.reddit.com
-
-super + ctrl + n
-    google-chrome --app=https://www.netflix.com
-
-super + ctrl + y
-    google-chrome --app=https://www.youtube.com
-
-super + ctrl + m
-    google-chrome --app=https://mail.google.com
-
-super + ctrl + k
-    google-chrome --app=https://keep.google.com
-
-super + ctrl + s
-    google-chrome --app=https://sainsburys.co.uk
-
-super + ctrl + i
-    google-chrome --app=https://www.bbc.co.uk/iplayer
-
-super + ctrl + e
-    google-chrome --app=https://www.reddit.com
-
-super + ctrl + h
-    google-chrome --app=https://www.reddit.com
-
-super + ctrl + j
-    google-chrome --app=https://www.just-eat.co.uk
-
-super + ctrl + i
-    google-chrome --app=https://www.reddit.com
-
 #
 # applications
 #
 super + shift + n
-        gnome-terminal -x bash -c "newsbeuter -r; exec bash"
+    gnome-terminal -x bash -c "newsbeuter -r; exec bash"
 
 super + shift + e
-        gnome-terminal -x bash -c "mutt; exec bash"
+    alacritty mutt
+    #gnome-terminal -x bash -c "mutt; exec bash"
 
 super + shift + v
-        gnome-terminal -x bash -c "vim; exec bash"
+    gnome-terminal -x bash -c "vim; exec bash"
 
 super + shift + f
-        gnome-terminal -x bash -c "ranger; exec bash"
+    gnome-terminal -x bash -c "ranger; exec bash"
 
 super + shift + r
-        gnome-terminal -x bash -c "rtv --enable-media; exec bash"
+    gnome-terminal -x bash -c "rtv --enable-media; exec bash"
 
 super + shift + h
-        gnome-terminal -x bash -c "htop; exec bash"
+    gnome-terminal -x bash -c "htop; exec bash"
 
 super + shift + t
-        gnome-terminal -x bash -c "htop; exec bash"
+    gnome-terminal -x bash -c "htop; exec bash"
 
 super + shift + s
-        GDK_SCALE=2 steam
+    GDK_SCALE=2 steam
 
 super + shift + m
-        gnome-terminal -x bash -c "ncmpcpp; exec bash"
+    gnome-terminal -x bash -c "ncmpcpp; exec bash"
 
 super + shift + c
-        gnome-terminal -x bash -c "bc; exec bash"
+    gnome-terminal -x bash -c "bc; exec bash"
 
 super + shift + y
-        gnome-terminal -x bash -c "ranger ~/Videos/youtube/; exec bash"
+    gnome-terminal -x bash -c "ranger ~/Videos/youtube/; exec bash"
 
 super + shift + l
-        gnome-terminal -x bash -c "lynx 'https://duckduckgo.com'; exec bash"
+    gnome-terminal -x bash -c "lynx 'https://duckduckgo.com'; exec bash"
+
