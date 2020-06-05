@@ -6,6 +6,8 @@ cd ~/bin/youtube-queue.d/
 COUNTER=1
 TOTAL=$(cat queue | wc -l)
 
+alias notify-send="/usr/bin/notify-send"
+
 if [ ! -f queue.lock ]; then
   touch queue.lock
 

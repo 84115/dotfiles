@@ -24,6 +24,8 @@ sudo apt install -y screen htop screenfetch \
 
 [[ $DISPLAY ]] && printf "[*] WM & GUI \n" && \
     sudo apt install -y bspwm sxhkd polybar dmenu dunst compton xscreensaver \
+        xbindkeys xbindkeys-config xdotool \ # keyboard mouse keys
+        xfce4-power-manager \ #screen & keyboard brightness,etc
         firefox \
         seahorse gnome-disks \
         rxvt-unicode gnome-terminal \
@@ -31,3 +33,4 @@ sudo apt install -y screen htop screenfetch \
         inkscape gimp \
         keepassxc
 
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -n -t bool -s false

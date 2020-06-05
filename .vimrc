@@ -15,10 +15,15 @@ set autoindent
 set tabstop=4
 "set softtabstop=4
 
-execute pathogen#infect()
-call pathogen#helptags()
+set path+=**
+set wildmenu
 
-command Sidebar NERDTree
+"execute pathogen#infect()
+"call pathogen#helptags()
+
+"command Sidebar NERDTree
+
+command Tab RangerCurrentDirectoryNewTab
 
 command Run w | !%
 command Xbash w | !bash %
@@ -45,4 +50,8 @@ endfu
 com! WP call WordProcessingMode()
 
 let g:user_emmet_leader_key='<C-E>'
+"ctrl,shift,n = autocomplete
+map <C-S-f> <esc> :Tab <return>
+map <C-t> <esc> gt
+"map <C-S-t> <esc> gT
 

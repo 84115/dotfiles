@@ -2,16 +2,28 @@
 super + Return
     alacritty
 
-# program launcher
-super + d
-    dmenu_run -fn 'Terminus -22' -nb '#222' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+super + shift + Return
+    spawn-alacritty-cwd & >> /dev/null
 
 # program launcher
+super + d
+    dmenu_run -b -fn 'Terminus -20' -nb '#000' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
+
 super + f
     duck
+    #dmenu/web
 
 super + e
     emoji_dmenu
+    #dmenu/emoji
+
+super + c
+    config_dmenu
+    #dmenu/config
+
+super + s
+    sys_dmenu
+    #dmenu/sys
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -123,65 +135,70 @@ alt + 4
 alt + 5
     bspc config window_gap 0
 
+ctrl + 1
+    sleep .2 && xdotool click 1
+
+ctrl + 2
+    sleep .2 && xdotool click 2
+  
+ctrl + 3
+    sleep .2 && xdotool click 3
+
+ctrl + Left
+    xdotool mousemove_relative -- -45 -0
+
+ctrl + Right
+    xdotool mousemove_relative 45 0
+
+ctrl + Up
+    xdotool mousemove_relative 0 -45
+
+ctrl + Down
+    xdotool mousemove_relative 0 45
+
+
 
 #
 # window type
 #
-alt + f
-    bspc node -t floating
+alt + {f,t,p}
+    bspc node -t {floating,tiled,psuedo_tiled}
 
-alt + t
-    bspc node -t tiled
-
-alt + p
-    bspc node -t psuedo_tiled
-
-
-
-super + shift + z
-    xrandr --output eDP-1 --brightness 0.5
-
-super + shift + x
-    xrandr --output eDP-1 --brightness 1.0
 
 
 #
 # applications
 #
 super + shift + n
-    gnome-terminal -x bash -c "newsbeuter -r; exec bash"
+    alacritty -e newsbeuter
 
 super + shift + e
-    alacritty mutt
-    #gnome-terminal -x bash -c "mutt; exec bash"
+    alacritty -e mutt
 
 super + shift + v
-    gnome-terminal -x bash -c "vim; exec bash"
+    alacritty -e vim
 
 super + shift + f
-    gnome-terminal -x bash -c "ranger; exec bash"
+    alacritty -e ranger
 
 super + shift + r
-    gnome-terminal -x bash -c "rtv --enable-media; exec bash"
+    alacritty -e rtv
 
 super + shift + h
-    gnome-terminal -x bash -c "htop; exec bash"
+    alacritty -e htop
 
 super + shift + t
-    gnome-terminal -x bash -c "htop; exec bash"
+    alacritty -e htop
 
 super + shift + s
     GDK_SCALE=2 steam
 
 super + shift + m
-    gnome-terminal -x bash -c "ncmpcpp; exec bash"
+    alacritty -e ncmpcpp
 
 super + shift + c
-    gnome-terminal -x bash -c "bc; exec bash"
-
-super + shift + y
-    gnome-terminal -x bash -c "ranger ~/Videos/youtube/; exec bash"
+    alacritty -e bc
 
 super + shift + l
-    gnome-terminal -x bash -c "lynx 'https://duckduckgo.com'; exec bash"
+    alacritty -e lynx
 

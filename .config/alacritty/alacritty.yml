@@ -13,7 +13,9 @@ dpi:
   x: 96.0
   y: 96.0
 
-background_opacity: 0.75
+background_opacity: 0.40
+#background_opacity: 0.6
+#background_opacity: 0.7
 
 font:
   normal:
@@ -82,9 +84,9 @@ cursor:
   unfocused_hollow: true
 
 key_bindings:
-  - { key: V,        mods: Control|Shift,    action: Paste               }
-  - { key: C,        mods: Control|Shift,    action: Copy                }
-  - { key: Return,   mods: Control|Shift,    action: SpawnNewInstance    }
+  - { key: V,      mods: Control|Shift, action: Paste            }
+  - { key: C,      mods: Control|Shift, action: Copy             }
+  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
     
 mouse:
   double_click: { threshold: 300 }

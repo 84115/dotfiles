@@ -13,6 +13,9 @@ xline () {
     sed -n "$1p" | xclip
 }
 
+digitalocean_ip="178.62.125.126"
+alias digitalocean="ssh -p 22 root@${digitalocean_ip}"
+
 alias x='clear'
 alias reload='source ~/.bashrc'
 alias xclip="xclip -selection c"

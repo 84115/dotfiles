@@ -7,8 +7,12 @@
  * See https://scryfall.com/docs/syntax for the full syntax guide */
 
 var https = require('https');
+var fs = require('fs');
+var dir = '/home/james/bin/scry.d/';
 
 var arg = process.argv.slice(2)[0];
+//arg = arg.substring(arg.indexOf("/") + 1).replace("\\", "");
+arg = arg.replace("bin/", "").replace("scry.d/", "").replace("\\", "");
 
 var colors = {
     RESET: "\x1b[0m",
@@ -71,26 +75,32 @@ GBP: £${(card.prices.eur/0.89).toFixed(2)}`;
 }
 
 if (arg) {
-    https.request({
-        host: 'api.scryfall.com',
-        path: '/cards/search?q=' + arg
-    }, (response) => {
-        var str = '';
+    if (fs.existsSync(dir+arg)) {
+        var data = JSON.parse(fs.readFileSync(dir+arg));
+        fetch(data);
+    } else {
+        https.request({
+            host: 'api.scryfall.com',
+            path: '/cards/search?q=' + arg
+        }, (response) => {
+            var str = '';
 
-        response.on('data', function (chunk) {
-            str += chunk;
-        });
+            response.on('data', function (chunk) {
+                str += chunk;
+            });
 
-        response.on('end', function () {
-            var result = JSON.parse(str);
+            response.on('end', function () {
+                var result = JSON.parse(str);
 
-            if (typeof result.data === 'undefined') {
-                console.log('No results');
-            } else {
-                fetch(result);
-            }
-        });
-    }).end();
+                if (typeof result.data === 'undefined') {
+                    console.log('No results');
+                } else {
+                    fetch(result);
+                    fs.writeFileSync(dir+arg, JSON.stringify(result), { flag: 'w' });
+                }
+            });
+        }).end();
+    }
 } else {
    console.log(`No arg; See ${colors.U}https:\/\/scryfall.com/docs/syntax`);
 }
