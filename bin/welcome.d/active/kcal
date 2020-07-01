@@ -1,0 +1,3 @@
+echo "Kcal $(counter show kcal)% of 100%" | cowsay | lolcat
+echo ""
+

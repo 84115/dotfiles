@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#56
+
+cd /home/james/bin/counter.d/
+
+init(){
+    touch "$1"
+}
+
+list(){
+    ls "$(pwd)"
+}
+
+show(){
+    content=($(cat "$1"))
+    cat "$1"
+}
+
+add(){
+    content=($(cat "$1"))
+    update=$(($content + $2))
+    echo "$update" > "$1"
+    echo "$content+$2=$update"
+}
+
+append(){
+    echo "$2" >> "$1"
+    cat $1
+}
+
+case "$1" in
+     init)
+        init $2
+        ;;
+    list)
+        list $2
+        ;;
+    show)
+        show $2
+        ;;
+    add)
+        add $2 $3
+        ;;
+    append)
+        append $2 $3
+        ;;
+esac
+

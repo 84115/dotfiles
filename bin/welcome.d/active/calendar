@@ -1,0 +1,2 @@
+calendar | shuf -n 1 | cowsay -f tux | lolcat
+

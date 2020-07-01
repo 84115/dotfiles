@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $DISPLAY ]]
+then
+    clear
+
+    call=$(ls /home/james/bin/welcome.d/active | shuf -n 1)
+
+    source "/home/james/bin/welcome.d/active/${call}"
+fi
+

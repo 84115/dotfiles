@@ -93,7 +93,7 @@ function eight_prompt {
     local __last_color="\[\033[00m\]"
     export PS1="$__user_and_host $__cur_location $__git_branch_color$__git_branch$__prompt_tail$__last_color "
 }
-eight_prompt
+PROMPT_COMMAND=eight_prompt
 
 
 
@@ -150,4 +150,6 @@ fi
 export EDITOR='vim'
 
 export LYNX_LSS="$HOME/.lynx.lss"
+
+bin/welcome
 

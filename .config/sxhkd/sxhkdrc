@@ -1,9 +1,9 @@
 # terminal emulator
 super + Return
-    alacritty
+    random_frame & alacritty
 
 super + shift + Return
-    spawn-alacritty-cwd & >> /dev/null
+    random_frame & spawn-alacritty-cwd & >> /dev/null
 
 # program launcher
 super + d
@@ -46,7 +46,7 @@ super + alt + Escape
 
 # close and kill
 super + {_,shift + }w
-	bspc node -{c,k}
+	random_frame & bspc node -{c,k}
 
 
 #
@@ -157,6 +157,18 @@ ctrl + Down
     xdotool mousemove_relative 0 45
 
 
+
+super + {comma,period}
+    mpc -q {prev,next}
+
+super + shift + {comma,period}
+	mpc seek {-1,+1}
+
+super + slash
+    mpc -q toggle
+
+super + backslash
+    amixer sset Master 0 unmute
 
 #
 # window type

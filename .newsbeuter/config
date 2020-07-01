@@ -4,6 +4,7 @@ macro k open ; reload ; quit
 
 # Download video
 macro q set browser "echo %u >> ~/bin/youtube-queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
+macro p set browser "cd ~/Podcasts && wget %u &"; open-in-browser ; set browser "$BROWSER %u"
 
 
 

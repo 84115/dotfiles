@@ -1,5 +1,10 @@
 # :%s/.com\/channel\//.com\/feeds\/videos.xml\?channel_id=
 
+http://localhost:4000/atom.xml #ME
+
+
+https://news.ycombinator.com/rss computing #ycombinator
+
 https://blog.mozilla.org/feed/ computing #Mozilla
 http://static.fsf.org/fsforg/rss/news.xml foss #FSF"
 https://yawnbox.wordpress.com/feed/ computing #Computing"
@@ -7,7 +12,13 @@ https://ownyourbits.com/feed/ computing #Computing"
 http://feeds.feedburner.com/darknethackers computing #Computing"
 https://hackaday.com/blog/feed/ computing #Computing"
 https://www.raspberrypi.org/feed/ computing #Computing"
+
+https://lukesmith.xyz/rss.xml computing people #Luke Smith
+https://nitter.net/addyosmani/rss computing people #Addy Osmani
+
 https://zenhabits.net/feed/ lifestyle #Zen Habbits
+
+https://shoutengine.com/CumTown.xml
 
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw youtube computing #LinusTechTips"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube computing #Luke Smith 
@@ -17,6 +28,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A you
 https://www.youtube.com/feeds/videos.xml?channel_id=UCFuyCsMOEkJ27lHZ-AT9TmA youtube computing #Florb Youtube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCpvhlSLzg2LT89FNUuN-Sig youtube computing #Wireless Phillosophy"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCt7fwAhXDy3oNFTAzF2o8Pw youtube music #The Needle Drop"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCnxQ8o9RpqxGF2oLHcCn9VQ youtube music #Fantano
 https://www.youtube.com/feeds/videos.xml?channel_id=UCSMqateX8OA2s1wsOR2EgJA youtube news #TLDR News"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3XTzVzaHQEd30rQbuvCtTQ youtube news #Last Week Tonight"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC0M0rxSz3IF0CsSour1iWmw youtube people #Cinemassacre"
@@ -75,4 +87,12 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCV1G6JkQtB2nobFm3MGNsBQ you
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXdG2bTITo_9dH0heqkXlDQ youtube music #The Art of Guitar"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwRXb5dUK4cvsHbx-rGzSgw youtube computing #Derek Banas"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRbOPaGDB_xOQkVM8Rnn62Q youtube comedy #I Hate Everything"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCUERVRulpmC0DMspYCXlqaw youtube music #Trevor Wong"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCL7DDQWP6x7wy0O6L5ZIgxg youtube gaming #Jerma
+https://www.youtube.com/feeds/videos.xml?channel_id=UCjfbkA4jJkJY5g0wbjuoZWA youtube music #JHS Pedals
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsnGwSIHyoYN0kiINAGUKxg youtube computing #WolgGang
+https://www.youtube.com/feeds/videos.xml?channel_id=UCzQUP1qoWDoEbmsQxvdjxgQ youtube people #Joe Rogan
+https://www.youtube.com/feeds/videos.xml?channel_id=UCPD_bxCRGpmmeQcbe2kpPaA youtube tv #First We Feast
+https://www.youtube.com/feeds/videos.xml?channel_id=UC42VsoDtra5hMiXZSsD6eGg youtube people #Modern Rouge
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg youtube computing #Distrotube
 

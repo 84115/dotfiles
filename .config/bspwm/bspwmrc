@@ -2,9 +2,9 @@
 
 sxhkd &
 
-compton &
+#compton &
 
-polybar example &
+#polybar example &
 
 xscreensaver -no-splash &
 
@@ -12,13 +12,18 @@ xscreensaver -no-splash &
 
 #xfce4-power-manager -c &
 xfce4-power-manager --no-daemon &
+#NOT NEEDED?  #pkill -9 gnome-screensav
 #xfce4-power-manager -c --no-daemon &
 
 #feh --bg-scale ~/Pictures/MOSHED-2019-1-31-14-21-13.alt.jpg
 #feh --bg-scale ~/Pictures/Wallpaper/fog.jpg
 #feh --bg-scale Pictures/Wallpaper/road-lg.jpg
+#feh --bg-scale ~/Pictures/Wallpaper/sea-1.jpg
 
-#xrandr --output eDP-1 --brightness 1.0
+#Mouse Cursor (/usr/share/icons/DMZ-White/cursors)
+#xsetroot -cursor_name crosshair &
+#nomouse
+#sudo xinput set-prop 11 "Device Enabled" 0 # or 1
 
 bspc monitor eDP-1 -d I II III IV V
 #bspc monitor eDP-1 -d I II III IV V VI VII VIII IX
@@ -33,6 +38,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Steam desktop='^4'
 bspc rule -a Gimp desktop='^5' state=floating follow=on
+bspc rule -a LG3D desktop='^3' state=floating follow=on
 bspc rule -a Screenkey manage=off
 
 bspc config top_padding        50 #18 + 32
@@ -40,12 +46,15 @@ bspc config bottom_padding     18
 bspc config left_padding       18
 bspc config right_padding      18
 
-bspc config urgent_border_color "#FB4934"
-bspc config presel_border_color "#458588"
-bspc config normal_border_color "#232323"
-bspc config focused_border_color "#000000"
+#bspc config urgent_border_color "#FB4934"
+#bspc config presel_border_color "#458588"
+#bspc config normal_border_color "#232323"
+#bspc config focused_border_color "#000000"
 
 #setxkbmap -option caps:escape
 
-xwallpaper &
+#xwallpaper &
+
+#load theme
+./.config/bspwm/themes/cubic
 
