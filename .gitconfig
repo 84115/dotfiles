@@ -2,7 +2,8 @@
 	email = jamesballsemail@gmail.com
 	name = James
 [alias]
-    tree = log --graph --decorate --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --abbrev-commit
+    tree = log --graph --decorate
+    #tree = log --graph --decorate --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --abbrev-commit
     trash = reflog show --decorate --pretty=oneline --abbrev-commit
     recovery = fsck --full --no-reflogs --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline > .git/recovery.txt
     restart = reset --hard HEAD

@@ -16,6 +16,8 @@ xline () {
 digitalocean_ip="178.62.125.126"
 alias digitalocean="ssh -p 22 root@${digitalocean_ip}"
 
+alias artisan='php artisan'
+alias kanban='taskell'
 alias x='clear'
 alias reload='source ~/.bashrc'
 alias xclip="xclip -selection c"
@@ -23,3 +25,17 @@ alias xclip="xclip -selection c"
 alias hgrep="history | grep"
 alias fgrep="reload && grep -rnw $(pwd) -e"
 
+alias weather="clear && curl wttr.in"
+
+alias feh="feh --geometry 690x690"
+
+alias ext="cd /media/james/504D8EF2670256F7/"
+
+alias sync--mixer="rsync -a --chown=www-data:www-data --verbose --progress --stats --compress /home/james/Dev/mixer/* root@178.62.125.126:/var/www/html"
+
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'

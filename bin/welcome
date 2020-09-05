@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $DISPLAY ]]
+if [[ $DISPLAY && "/home/$(whoami)" == "$(pwd)" ]]
 then
     clear
 

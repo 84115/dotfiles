@@ -5,25 +5,27 @@ super + Return
 super + shift + Return
     random_frame & spawn-alacritty-cwd & >> /dev/null
 
+super + t
+    random_frame & alacritty -e tmux
+
 # program launcher
 super + d
     dmenu_run -b -fn 'Terminus -20' -nb '#000' -sf '#222' -sb '#EBDBB2' -nf '#EBDBB2'
 
 super + f
     duck
-    #dmenu/web
 
-super + e
+super + m
     emoji_dmenu
-    #dmenu/emoji
 
-super + c
+super + v
     config_dmenu
-    #dmenu/config
 
 super + s
     sys_dmenu
-    #dmenu/sys
+
+super + e
+    wine_dmenu
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -36,6 +38,9 @@ super + k
 super + l
     xscreensaver-command -lock
 
+super + p
+	bspc config focus_follows_pointer {true,false}
+
 #
 # bspwm hotkeys
 #
@@ -47,6 +52,10 @@ super + alt + Escape
 # close and kill
 super + {_,shift + }w
 	random_frame & bspc node -{c,k}
+
+super + j
+    bspc desktop --layout {monocle,tiled}
+
 
 
 #
@@ -93,7 +102,8 @@ super + alt + shift + {Left,Down,Up,Right}
 
 # move a floating window
 super + ctrl + {Left,Down,Up,Right}
-	bspc node -v {-30 0,0 30,0 -30,30 0}
+	bspc node -v {-1 0,0 1,0 -1,1 0}
+	#bspc node -v {-30 0,0 30,0 -30,30 0}
 
 # rotate
 super + ctrl + r
@@ -109,31 +119,35 @@ super + z
 super + x
     amixer sset Master 5+ unmute
 
+super + c
+    amixer -D pulse set Master toggle
+
+XF86AudioRaiseVolume
+    amixer sset Master 5+ unmute
+
+XF86AudioLowerVolume
+    amixer sset Master 5- unmute
+
+XF86AudioMute
+    amixer -D pulse set Master toggle
 
 #
 # gaps
 #
 
 alt + 0
-    bspc config top_padding 50 && bspc config bottom_padding 18 && bspc config left_padding 18 && bspc config right_padding 18
-
-alt + 9
-    bspc config top_padding 0 && bspc config bottom_padding 0 && bspc config left_padding 0 && bspc config right_padding 0
+    bspc config window_gap {0,28,64,128,256}
 
 alt + 1
-    bspc config window_gap 28
+    bspc config top_padding 50 && bspc config bottom_padding 18 && bspc config left_padding 18 && bspc config right_padding 18
 
 alt + 2
-    bspc config window_gap 64
+    bspc config top_padding 0 && bspc config bottom_padding 0 && bspc config left_padding 0 && bspc config right_padding 0
 
 alt + 3
-    bspc config window_gap 128
+    bspc config top_padding 80
 
-alt + 4
-    bspc config window_gap 256
 
-alt + 5
-    bspc config window_gap 0
 
 ctrl + 1
     sleep .2 && xdotool click 1
@@ -164,6 +178,9 @@ super + {comma,period}
 super + shift + {comma,period}
 	mpc seek {-1,+1}
 
+super + shift + i
+    alert $(mpc --format '%title% / %artist% / %album%')
+
 super + slash
     mpc -q toggle
 
@@ -173,8 +190,8 @@ super + backslash
 #
 # window type
 #
-alt + {f,t,p}
-    bspc node -t {floating,tiled,psuedo_tiled}
+alt + t
+    bspc node -t {floating,tiled}
 
 
 
@@ -209,7 +226,10 @@ super + shift + m
     alacritty -e ncmpcpp
 
 super + shift + c
-    alacritty -e bc
+    gpick
+
+super + shift + k
+    screenruler
 
 super + shift + l
     alacritty -e lynx

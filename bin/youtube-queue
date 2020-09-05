@@ -27,8 +27,8 @@ if [ ! -f queue.lock ]; then
 
     youtube-dl -f '[height <=? 480]' "$q"
 
-    echo "${MESSAGE/loading/loaded}"
-    notify-send --urgency=low -i "youtube-queue" "youtube-queue" "${MESSAGE/loading/loaded}"
+    #echo "${MESSAGE/loading/loaded}"
+    #notify-send --urgency=low -i "youtube-queue" "youtube-queue" "${MESSAGE/loading/loaded}"
 
     COUNTER=$((COUNTER + 1))
   done <queue

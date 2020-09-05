@@ -2,9 +2,6 @@
 
 http://localhost:4000/atom.xml #ME
 
-
-https://news.ycombinator.com/rss computing #ycombinator
-
 https://blog.mozilla.org/feed/ computing #Mozilla
 http://static.fsf.org/fsforg/rss/news.xml foss #FSF"
 https://yawnbox.wordpress.com/feed/ computing #Computing"
@@ -12,6 +9,8 @@ https://ownyourbits.com/feed/ computing #Computing"
 http://feeds.feedburner.com/darknethackers computing #Computing"
 https://hackaday.com/blog/feed/ computing #Computing"
 https://www.raspberrypi.org/feed/ computing #Computing"
+
+https://stitcher.io/rss #Stitcher.io
 
 https://lukesmith.xyz/rss.xml computing people #Luke Smith
 https://nitter.net/addyosmani/rss computing people #Addy Osmani
@@ -95,4 +94,21 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCzQUP1qoWDoEbmsQxvdjxgQ you
 https://www.youtube.com/feeds/videos.xml?channel_id=UCPD_bxCRGpmmeQcbe2kpPaA youtube tv #First We Feast
 https://www.youtube.com/feeds/videos.xml?channel_id=UC42VsoDtra5hMiXZSsD6eGg youtube people #Modern Rouge
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg youtube computing #Distrotube
-
+https://www.youtube.com/feeds/videos.xml?channel_id=UCG5h8yHSUS4n7zPnh0dG0SA youtube people #Georg Rockall-Schmidt
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJquYOG5EL82sKTfH9aMA9Q youtube people music #Rick Beato
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_Oa7Ph3v94om5OyxY1nPKg youtube people music #Paul Davids
+https://www.youtube.com/feeds/videos.xml?channel_id=UCpZCNYMXJI_ptSBD3t47NOQ youtube #Strictly Better MtG
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9_p50tH3WmMslWRWKnM7dQ youtube #Adam Ragusea 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCkY047vYjF92-8HcoVTXAOg youtube #Coding Secrets
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-9QiiVaViuqMhLp1XEwdxA youtube #Arlo
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgKJPhVzv8w0VaZFnS_VmaA youtube #Philion
+https://www.youtube.com/feeds/videos.xml?channel_id=UCj1Jtb8xLUzFAm8J-Q1e1MQ youtube #samuraiguitarist
+https://www.youtube.com/feeds/videos.xml?channel_id=UCru6U5iD61PgosWdGx-v3jA youtube #Gemini Guitar
+https://www.youtube.com/feeds/videos.xml?channel_id=UCioZY1p0bZ4Xt-yodw8_cBQ youtube #How To Drink
+https://www.youtube.com/feeds/videos.xml?channel_id=UCt54Hzhj7RpCWOYpoFJLKAQ youtube #steveo
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJg8odOx7WkSgp00CjLVmrw youtube #No Fun Haus
+https://www.youtube.com/feeds/videos.xml?channel_id=UCDWIvJwLJsE4LG1Atne2blQ youtube #H3H3
+https://www.youtube.com/feeds/videos.xml?channel_id=UCF-ACPYNN0oXD4ihS5mbbmw youtube #avantgardevegan
+https://www.youtube.com/feeds/videos.xml?channel_id=UCfVFSjHQ57zyxajhhRc7i0g youtube #GameHut
+https://www.youtube.com/feeds/videos.xml?channel_id=UCfe_znKY1ukrqlGActlFmaQ youtube #Healthy Software Developer
+https://www.youtube.com/feeds/videos.xml?channel_id=UC8h8NJG9gacZ5lAJJvhD0fQ youtube #NardwuarServiette

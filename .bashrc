@@ -151,5 +151,8 @@ export EDITOR='vim'
 
 export LYNX_LSS="$HOME/.lynx.lss"
 
-bin/welcome
+export THEME='purple'
+#export THEME='cubic'
+
+~/bin/welcome
 
