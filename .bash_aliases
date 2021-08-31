@@ -9,6 +9,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+alias ns-docker="sudo docker-compose down && sudo docker-compose build --no-cache php && sudo docker-compose up"
+alias ns-ngrok="ngrok http api-public.sequencer.test:8080"
+
+alias ns-referrey-ssh-test="ssh forge@46.101.62.134"
+alias ns-referrey-ssh-prod="ssh forge@159.65.16.187"
+
 xline () {
     sed -n "$1p" | xclip
 }

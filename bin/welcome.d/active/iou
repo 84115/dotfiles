@@ -1,3 +1,0 @@
-echo "I.O.U. to Nicky: £$(counter show iou)" | cowsay -f unipony-smaller | lolcat
-echo ""
-

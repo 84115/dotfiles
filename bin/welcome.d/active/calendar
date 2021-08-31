@@ -1,2 +1,7 @@
-calendar | shuf -n 1 | cowsay -f tux | lolcat
+purple="purple"
 
+if [ "$THEME" == "$purple" ]; then
+    calendar -f /usr/share/calendar/calendar.world | shuf -n 1 | cowsay -f tux | lolcat
+else
+    calendar -f /usr/share/calendar/calendar.world | shuf -n 1 | cowsay -f tux
+fi

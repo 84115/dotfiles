@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo $((($(date +%s)-$(date +%s --date "2020-03-23"))/(3600*24))) days since lockdown | cowsay -f skeleton | lolcat
-echo ""
-

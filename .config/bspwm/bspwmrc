@@ -2,7 +2,7 @@
 
 sxhkd &
 
-xscreensaver -no-splash &
+#xscreensaver -no-splash &
 
 xfce4-power-manager --no-daemon &
 
@@ -12,7 +12,7 @@ xfce4-power-manager --no-daemon &
 #sudo xinput set-prop 11 "Device Enabled" 0 # or 1
 
 bspc monitor eDP1 -d I II III IV V
-#bspc monitor HDMI-1 -d X
+bspc monitor HDMI-1 -d X
 
 bspc config border_width         4
 bspc config window_gap          28
@@ -37,8 +37,13 @@ bspc config right_padding      18
 pointer_action2 resize_corner
 pointer_action3 focus
 
-#setxkbmap -option caps:escape
+setxkbmap -option caps:escape
 
 #load theme
 ./.config/themes/$THEME
+
+#PHP Storm
+wmname LG3D
+
+redshift
 
