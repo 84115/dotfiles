@@ -4,7 +4,8 @@ export THEME='purple'
 
 compton &
 
-polybar example &
+polybar one &
+# polybar two &
 
 #pkill -9 xscreensaver
 #xscreensaver -no-splash &

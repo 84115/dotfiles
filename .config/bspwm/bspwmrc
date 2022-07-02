@@ -11,8 +11,13 @@ xfce4-power-manager --no-daemon &
 #nomouse
 #sudo xinput set-prop 11 "Device Enabled" 0 # or 1
 
-bspc monitor eDP1 -d I II III IV V
-bspc monitor HDMI-1 -d X
+#bspc monitor eDP1 -d I II III IV V
+#bspc monitor HDMI1 -d VI VII
+bspc monitor eDP1 -d 1 2 3 4 5
+bspc monitor HDMI1 -d 0 6 7 8 9 0
+
+xrandr --output eDP1 --auto --output HDMI1 --scale 1.5x1.5 --right-of eDP1
+#xrandr --output eDP1 --auto --output HDMI1 --rotate right --right-of eDP1
 
 bspc config border_width         4
 bspc config window_gap          28
@@ -46,4 +51,6 @@ setxkbmap -option caps:escape
 wmname LG3D
 
 redshift
+
+# xrandr --output eDP1 --auto --output HDMI1 --right-of eDP1
 
