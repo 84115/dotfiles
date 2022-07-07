@@ -159,5 +159,8 @@ export THEME='purple'
 #export THEME='starry-night' #wip
 #export THEME='cubic'
 
-~/bin/welcome
+if [ -d ~/bin/personal.d/ ]; then
+    PATH=$PATH:~/bin/personal.d
+fi
 
+~/bin/welcome
