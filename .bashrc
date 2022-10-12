@@ -163,4 +163,6 @@ if [ -d ~/bin/personal.d/ ]; then
     PATH=$PATH:~/bin/personal.d
 fi
 
+export PATH=/usr/local/lib/nodejs/node-v16.17.1-linux-x64/bin:$PATH
+
 ~/bin/welcome
