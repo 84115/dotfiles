@@ -1,5 +1,7 @@
 #! /bin/sh
 
+mpv /home/james/Music/ps1.mp3 --volume 100 &
+
 sxhkd &
 
 #xscreensaver -no-splash &
