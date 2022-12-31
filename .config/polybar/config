@@ -78,7 +78,7 @@ font-2 = Terminus-Bold:pixelsize=22;1
 modules-left = bspwm xwindow
 ;modules-center = mpd
 ;modules-right = filesystem pulseaudio xkeyboard memory cpu battery temperature date
-modules-right = wlan eth mpd pulseaudio memory xkeyboard battery date cpu temperature filesystem
+modules-right = wlan eth pulseaudio memory xkeyboard battery date cpu temperature filesystem
 
 ;modules-left = bspwm xwindow
 ;modules-center = bspwm mpd
