@@ -209,7 +209,7 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #B16286
 label-connected = %essid%
 
-format-disconnected =
+format-disconnected = :(
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
