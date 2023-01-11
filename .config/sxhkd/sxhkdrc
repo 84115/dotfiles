@@ -203,16 +203,19 @@ ctrl + shift + Down
 
 
 super + {comma,period}
-    mpc -q {prev,next}
+    /home/james/bin/spotify-cli {prev,next}
+    #mpc -q {prev,next}
 
 super + shift + {comma,period}
-	mpc seek {-1,+1}
+    /home/james/bin/spotify-cli {play,play}
+	#mpc seek {-1,+1}
 
 super + shift + i
     alert $(mpc --format '%title% / %artist% / %album%')
 
 super + slash
-    mpc -q toggle
+    /home/james/bin/spotify-cli play
+    #mpc -q toggle
 
 super + backslash
     amixer sset Master 0 unmute
