@@ -1,5 +1,8 @@
 # xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
+Print
+    scrot && notify-send --urgency=normal -i "scrot" "scrot" "screenshot: taken"
+
 # terminal emulator
 super + Return
     random_frame & alacritty
