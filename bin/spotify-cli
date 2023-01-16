@@ -244,6 +244,7 @@ SPOTIFY_PID="$(pidof -s spotify || pidof -s .spotify-wrapped)"
 
 if [[ -z "$SPOTIFY_PID" ]]; then
   echo "Error: Spotify is not running."
+  spotify &&
   exit 1
 fi
 
