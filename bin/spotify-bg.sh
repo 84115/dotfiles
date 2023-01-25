@@ -8,4 +8,6 @@ replacement="https://open.spotify.com/image/"
 
 command="${firstString/$replacement/"$secondString"}"
 
+pkill -9 compton
+
 eval $command
