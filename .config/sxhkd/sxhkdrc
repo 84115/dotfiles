@@ -1,7 +1,7 @@
 # xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 
 Pause
-    notify-send --urgency=normal -i "pause" "pause" "pause: break"
+    spotify-bg.sh && notify-send --urgency=normal -i "pause" "pause" "pause: break"
 
 Print
     scrot && notify-send --urgency=normal -i "scrot" "scrot" "screenshot: taken"
@@ -209,11 +209,11 @@ ctrl + shift + Down
 
 
 super + {comma,period}
-    /home/james/bin/spotify-cli {prev,next}
+    /home/james/bin/spotify-cli {prev,next} && spotify-bg.sh
     #mpc -q {prev,next}
 
 super + shift + {comma,period}
-    /home/james/bin/spotify-cli {play,play}
+    /home/james/bin/spotify-cli {play,play} && spotify-bg.sh
 	#mpc seek {-1,+1}
 
 super + shift + i
