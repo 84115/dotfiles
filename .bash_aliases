@@ -28,7 +28,7 @@ alias feh="feh --geometry 690x690"
 
 alias ext="cd /media/james/504D8EF2670256F7/"
 
-alias phpma="php -S 127.0.0.1:8001 -t ~/Freelance/phpma"
+alias phpma="sudo service mysql start && php -S 127.0.0.1:8001 -t ~/Freelance/phpma"
 
 alias ..='cd ..'
 alias .2='cd ../..'

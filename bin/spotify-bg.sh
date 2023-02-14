@@ -11,3 +11,6 @@ command="${firstString/$replacement/"$secondString"}"
 pkill -9 compton
 
 eval $command
+
+echo $command
+
