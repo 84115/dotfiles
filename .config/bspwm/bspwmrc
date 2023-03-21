@@ -56,3 +56,4 @@ redshift
 
 # xrandr --output eDP1 --auto --output HDMI1 --right-of eDP1
 
+xwinwrap -g 3200x1800 -ov -- mpv --loop -wid WID ~/Videos/breakfast.mp4
