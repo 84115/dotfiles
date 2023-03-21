@@ -118,6 +118,12 @@ super + ctrl + r
     bspc node @/ -R 90
 
 
+
+super + ctrl + alt + {1,2,3}
+    bspc node -l lbelow,normal,above}
+
+
+
 #
 # audio
 #
