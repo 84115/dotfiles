@@ -17,15 +17,13 @@
 ;==========================================================
 
 [colors]
-;background = #dd222
-;background-alt = #dd444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #4D1E5F
-secondary = #4D1E5F
+foreground = #A599E9
+foreground-alt = #606098
+primary = #1e1e3f
+secondary = #1e1e3f
 alert = #bd2c40
-background = #462a68
-background-alt = #4D1E5F
+background = #323264
+background-alt = #1e1e3f
 
 [bar/one]
 inherit = section/base
@@ -63,7 +61,7 @@ line-size = 0
 line-color = #f00
 
 border-size = 4
-border-color = #4D1E5F
+border-color = #1e1e3f
 
 padding-left = 0
 padding-right = 1
