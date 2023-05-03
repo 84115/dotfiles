@@ -2,13 +2,13 @@
 
 export THEME='purple'
 
-compton &
+# compton &
 
 polybar one &
 # polybar two &
 
-#pkill -9 xscreensaver
-#xscreensaver -no-splash &
+# pkill -9 xscreensaver
+# xscreensaver -no-splash &
 
 xsetroot -cursor_name crosshair &
 
@@ -22,11 +22,12 @@ bspc config right_padding  18
 
 bspc config urgent_border_color "#FB4934"
 bspc config presel_border_color "#000000"
-bspc config normal_border_color "#4D1E5F"
-bspc config focused_border_color "#D0B4D1"
+bspc config normal_border_color "#1e1e3f"
+bspc config focused_border_color "#A599E9"
 
 feh --bg-scale Pictures/Wallpaper/mavericks-2.jpg
-#xwallpaper &
+# xwallpaper &
 
-alacritty="alacritty --config-file ~/.config/alacritty/purple.yml"
+# alacritty="alacritty --config-file ~/.config/alacritty/purple.yml"
+alacritty="alacritty --config-file ~/.config/alacritty/shades-of-purple.yml"
 
