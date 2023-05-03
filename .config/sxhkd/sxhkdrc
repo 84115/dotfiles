@@ -8,7 +8,7 @@ Print
 
 # terminal emulator
 super + Return
-    random_frame & alacritty
+    random_frame & alacritty --config-file ~/.config/alacritty/shades-of-purple.yml
 
 super + shift + Return
     random_frame & spawn-alacritty-cwd & >> /dev/null
