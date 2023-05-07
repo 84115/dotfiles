@@ -82,6 +82,11 @@ super + n
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+super + Tab
+    bspc desktop next.local -f
+
+super + shift + Tab
+    bspc desktop prev.local -f
 
 #
 # preselect
@@ -285,8 +290,11 @@ super + shift + l
 
 
 # prfile info in ~/.config/chromium/Local\ State
+super + alt + Return
+    /opt/google/chrome/google-chrome --app=https://google.com --profile-directory="Profile 10"
+
 super + alt + j
-    /opt/google/chrome/google-chrome --profile-directory="Profile 10"
+    /opt/google/chrome/google-chrome --app=http://new.tab --profile-directory="Profile 10"
 
 super + alt + n
     /opt/google/chrome/google-chrome --app=https://notion.so --profile-directory="Profile 10"
@@ -303,8 +311,15 @@ super + alt + t
 super + alt + g
     /opt/google/chrome/google-chrome --app=https://github.com/84115?tab=repositories&q=&type=source&language=&sort= --profile-directory="Profile 10"
 
-super + alt + s
+super + alt + c
     /opt/google/chrome/google-chrome --app=https://vclock.com/stopwatch --profile-directory="Profile 10"
+
+super + alt + s
+    /opt/google/chrome/google-chrome --app=https://open.spotify.com --profile-directory="Profile 10"
 
 super + alt + w
     /opt/google/chrome/google-chrome --app=https://web.whatsapp.com --profile-directory="Profile 10"
+
+super + alt + p
+    /opt/google/chrome/google-chrome --app=http://localhost:8001 --profile-directory="Profile 10"
+
