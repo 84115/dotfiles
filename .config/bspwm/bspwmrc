@@ -16,10 +16,9 @@ xfce4-power-manager --no-daemon &
 #bspc monitor eDP1 -d I II III IV V
 #bspc monitor HDMI1 -d VI VII
 bspc monitor eDP1 -d 1 2 3 4 5
-bspc monitor HDMI1 -d 0 6 7 8 9 0
+#bspc monitor HDMI1 -d 0 6 7 8 9 0
 
-xrandr --output eDP1 --auto --output HDMI1 --scale 1.5x1.5 --right-of eDP1
-#xrandr --output eDP1 --auto --output HDMI1 --rotate right --right-of eDP1
+#xrandr --output eDP1 --auto --output HDMI1 --scale 1.5x1.5 --right-of eDP1
 
 bspc config border_width         4
 bspc config window_gap          28
@@ -56,4 +55,5 @@ redshift
 
 # xrandr --output eDP1 --auto --output HDMI1 --right-of eDP1
 
-xwinwrap -g 3200x1800 -ov -- mpv --loop -wid WID ~/Videos/breakfast.mp4
+# xwinwrap -g 3200x1800 -ov -- mpv --loop -wid WID ~/Videos/breakfast.mp4
+
