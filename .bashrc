@@ -167,3 +167,7 @@ fi
 export PATH=/usr/local/lib/nodejs/node-v16.17.1-linux-x64/bin:$PATH
 
 ~/bin/welcome
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
