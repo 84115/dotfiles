@@ -294,7 +294,7 @@ super + alt + Return
     /opt/google/chrome/google-chrome --app=https://google.com --profile-directory="Profile 10"
 
 super + alt + j
-    /opt/google/chrome/google-chrome --app=http://new.tab --profile-directory="Profile 10"
+    /opt/google/chrome/google-chrome --app=file:///home/james/Freelance/newtab/public/index.html --profile-directory="Profile 10"
 
 super + alt + n
     /opt/google/chrome/google-chrome --app=https://notion.so --profile-directory="Profile 10"
