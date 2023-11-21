@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#56
-
 cd /home/james/bin/counter.d/
 
 init(){
@@ -24,6 +22,13 @@ add(){
     echo "$content+$2=$update"
 }
 
+def(){
+    content=($(cat "$1"))
+    update=$2
+    echo "$2" > "$1"
+    echo "$2"
+}
+
 append(){
     echo "$2" >> "$1"
     cat $1
@@ -41,6 +46,15 @@ case "$1" in
         ;;
     add)
         add $2 $3
+        ;;
+    def)
+        def $2 $3
+        ;;
+    set)
+        def $2 $3
+        ;;
+    reset)
+        def $2 0
         ;;
     append)
         append $2 $3

@@ -2,32 +2,22 @@
 
 sxhkd &
 
-#compton &
+#xscreensaver -no-splash &
 
-#polybar example &
-
-xscreensaver -no-splash &
-
-#xscreensaver-command -lock
-
-#xfce4-power-manager -c &
 xfce4-power-manager --no-daemon &
-#NOT NEEDED?  #pkill -9 gnome-screensav
-#xfce4-power-manager -c --no-daemon &
-
-#feh --bg-scale ~/Pictures/MOSHED-2019-1-31-14-21-13.alt.jpg
-#feh --bg-scale ~/Pictures/Wallpaper/fog.jpg
-#feh --bg-scale Pictures/Wallpaper/road-lg.jpg
-#feh --bg-scale ~/Pictures/Wallpaper/sea-1.jpg
 
 #Mouse Cursor (/usr/share/icons/DMZ-White/cursors)
 #xsetroot -cursor_name crosshair &
 #nomouse
 #sudo xinput set-prop 11 "Device Enabled" 0 # or 1
 
-bspc monitor eDP-1 -d I II III IV V
-#bspc monitor eDP-1 -d I II III IV V VI VII VIII IX
-bspc monitor HDMI-1 -d X
+#bspc monitor eDP1 -d I II III IV V
+#bspc monitor HDMI1 -d VI VII
+bspc monitor eDP1 -d 1 2 3 4 5
+bspc monitor HDMI1 -d 0 6 7 8 9 0
+
+xrandr --output eDP1 --auto --output HDMI1 --scale 1.5x1.5 --right-of eDP1
+#xrandr --output eDP1 --auto --output HDMI1 --rotate right --right-of eDP1
 
 bspc config border_width         4
 bspc config window_gap          28
@@ -39,22 +29,28 @@ bspc config gapless_monocle      true
 bspc rule -a Steam desktop='^4'
 bspc rule -a Gimp desktop='^5' state=floating follow=on
 bspc rule -a LG3D desktop='^3' state=floating follow=on
+bspc rule -a Gpick state=floating follow=on
 bspc rule -a Screenkey manage=off
+bspc rule -a vlc state=floating rectangle=32x32+0x0 follow=on sticky=on
+bspc rule -a feh state=floating rectangle=32x32+0x0
 
 bspc config top_padding        50 #18 + 32
 bspc config bottom_padding     18
 bspc config left_padding       18
 bspc config right_padding      18
 
-#bspc config urgent_border_color "#FB4934"
-#bspc config presel_border_color "#458588"
-#bspc config normal_border_color "#232323"
-#bspc config focused_border_color "#000000"
+pointer_action2 resize_corner
+pointer_action3 focus
 
-#setxkbmap -option caps:escape
-
-#xwallpaper &
+setxkbmap -option caps:escape
 
 #load theme
-./.config/bspwm/themes/cubic
+./.config/themes/$THEME
+
+#PHP Storm
+wmname LG3D
+
+redshift
+
+# xrandr --output eDP1 --auto --output HDMI1 --right-of eDP1
 

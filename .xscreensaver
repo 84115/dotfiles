@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.36 for james on Mon Jun 22 23:36:52 2020.
+# Written by xscreensaver-demo 5.42 for james on Mon Aug 23 19:11:10 2021.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
@@ -35,7 +35,7 @@ chooseRandomImages: False
 imageDirectory:	/home/james/Pictures
 
 mode:		one
-selected:	183
+selected:	188
 
 textMode:	date
 textLiteral:	XScreenSaver
@@ -267,6 +267,16 @@ programs:								      \
 - GL: 				raverhoop -root				    \n\
 - GL: 				splodesic -root				    \n\
 - GL: 				unicrud -root				    \n\
+  GL: 				esper -root				    \n\
+  GL: 				vigilance -root				    \n\
+  GL: 				crumbler -root				    \n\
+				filmleader -root			    \n\
+				glitchpeg -root				    \n\
+  GL: 				handsy -root				    \n\
+  GL: 				maze3d -root				    \n\
+  GL: 				peepers -root				    \n\
+  GL: 				razzledazzle -root			    \n\
+				vfeedback -root				    \n\
 
 
 pointerPollTime:    0:00:05

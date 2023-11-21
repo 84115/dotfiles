@@ -18,10 +18,13 @@ set tabstop=4
 set path+=**
 set wildmenu
 
-"execute pathogen#infect()
-"call pathogen#helptags()
+execute pathogen#infect()
+call pathogen#infect()
+syntax on
+filetype plugin indent on
+call pathogen#helptags()
 
-"command Sidebar NERDTree
+command Sidebar NERDTree
 
 command Tab RangerCurrentDirectoryNewTab
 

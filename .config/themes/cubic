@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export THEME='cubic'
+
 compton &
 
 polybar example &
@@ -8,6 +10,14 @@ pkill -9 xscreensaver
 xscreensaver -no-splash &
 
 xsetroot -cursor_name crosshair &
+
+bspc config border_width    4
+bspc config window_gap     28
+
+bspc config top_padding    50
+bspc config bottom_padding 18
+bspc config left_padding   18
+bspc config right_padding  18
 
 bspc config urgent_border_color "#FB4934"
 bspc config presel_border_color "#458588"

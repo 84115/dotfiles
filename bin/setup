@@ -20,7 +20,8 @@ sudo apt install -y screen htop screenfetch \
     imagemagick \
     ffmpeg ranger newsbeuter \
     cheese \
-    mutt lynx wget curl youtube-dl
+    mutt lynx wget curl youtube-dl \
+    trash-cli
 
 [[ $DISPLAY ]] && printf "[*] WM & GUI \n" && \
     sudo apt install -y bspwm sxhkd polybar dmenu dunst compton xscreensaver \

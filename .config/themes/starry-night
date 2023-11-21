@@ -1,0 +1,30 @@
+#!/bin/sh
+
+export THEME='starry-night'
+
+compton &
+
+polybar example &
+
+#pkill -9 xscreensaver
+#xscreensaver -no-splash &
+
+xsetroot -cursor_name pencil &
+
+bspc config border_width    4
+bspc config window_gap     28
+
+bspc config top_padding    50
+bspc config bottom_padding 18
+bspc config left_padding   18
+bspc config right_padding  18
+
+bspc config urgent_border_color "#FB4934"
+bspc config presel_border_color "#000000"
+bspc config normal_border_color "#1B466D"
+bspc config focused_border_color "#F8AE02"
+
+feh --bg-scale Pictures/Wallpaper/starry-night-hd.png
+
+alacritty="alacritty --config-file ~/.config/alacritty/starry-night.yml"
+

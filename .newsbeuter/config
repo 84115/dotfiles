@@ -6,9 +6,6 @@ macro k open ; reload ; quit
 macro q set browser "echo %u >> ~/bin/youtube-queue.d/queue &"; open-in-browser ; set browser "$BROWSER %u"
 macro p set browser "cd ~/Podcasts && wget %u &"; open-in-browser ; set browser "$BROWSER %u"
 
-
-
-
 # colors
 #color background           color255 color0
 #color listnormal           color255 color0
@@ -23,5 +20,4 @@ color info                 green black bold
 highlight article "^(Feed|Title|Link|Date|Author):.*$" color31 color0 
 highlight article "https?://[^ ]+" color9 color0 protect
 highlight article "\\[image\\ [0-9]+\\]" green default
-
 

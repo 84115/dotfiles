@@ -146,10 +146,18 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_work ]; then
+    . ~/.bash_work
+fi
+
 
 export EDITOR='vim'
 
 export LYNX_LSS="$HOME/.lynx.lss"
 
-bin/welcome
+export THEME='purple'
+#export THEME='starry-night' #wip
+#export THEME='cubic'
+
+~/bin/welcome
 
